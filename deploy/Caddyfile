@@ -1,0 +1,15 @@
+# HTTPS for the whole site. DOMAIN comes from .env, e.g. misfitshostel.com
+# Caddy gets and renews the certificate itself once the domain points at this server.
+{$DOMAIN} {
+	encode gzip
+	# Upload limit matches the website gateway (bill and ID photos).
+	request_body {
+		max_size 32MB
+	}
+	reverse_proxy web:80
+}
+
+# www.<domain> → <domain>
+www.{$DOMAIN} {
+	redir https://{$DOMAIN}{uri} permanent
+}

@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Misfits Hostel &amp; Cafe — Shoja &amp; Kasol</title>
+<meta name="ext-resource-dependency" content="assets/k-garden.jpg" data-resource-id="k-garden" />
+<meta name="ext-resource-dependency" content="assets/k-facade.jpg" data-resource-id="k-facade" />
+<meta name="ext-resource-dependency" content="assets/k-games.jpg" data-resource-id="k-games" />
+<meta name="ext-resource-dependency" content="assets/k-dorm-a.jpg" data-resource-id="k-dorm-a" />
+<meta name="ext-resource-dependency" content="assets/k-dorm-b.jpg" data-resource-id="k-dorm-b" />
+<meta name="ext-resource-dependency" content="assets/k-view.jpg" data-resource-id="k-view" />
+<meta name="ext-resource-dependency" content="assets/k-garden-games.jpg" data-resource-id="k-garden-games" />
+<meta name="ext-resource-dependency" content="assets/k-facade-2.jpg" data-resource-id="k-facade-2" />
+<meta name="ext-resource-dependency" content="assets/k-courtyard.jpg" data-resource-id="k-courtyard" />
+<meta name="ext-resource-dependency" content="assets/k-dorm-c.jpg" data-resource-id="k-dorm-c" />
+<meta name="ext-resource-dependency" content="assets/k-private.jpg" data-resource-id="k-private" />
+<meta name="ext-resource-dependency" content="assets/pod-dorm.jpg" data-resource-id="pod-dorm" />
+<meta name="ext-resource-dependency" content="assets/private-room.jpg" data-resource-id="private-room" />
+<meta name="ext-resource-dependency" content="assets/family-room.jpg" data-resource-id="family-room" />
+<meta name="ext-resource-dependency" content="assets/ridge-hostel.jpg" data-resource-id="ridge-hostel" />
+<meta name="ext-resource-dependency" content="assets/facade.jpg" data-resource-id="facade" />
+<meta name="ext-resource-dependency" content="assets/lounge.jpg" data-resource-id="lounge" />
+<meta name="ext-resource-dependency" content="assets/pod-dorm-2.jpg" data-resource-id="pod-dorm-2" />
+<meta name="ext-resource-dependency" content="assets/private-room-2.jpg" data-resource-id="private-room-2" />
+<meta name="ext-resource-dependency" content="assets/cafe-window.jpg" data-resource-id="cafe-window" />
+<meta name="ext-resource-dependency" content="assets/facade-2.jpg" data-resource-id="facade-2" />
+<meta name="ext-resource-dependency" content="assets/valley.jpg" data-resource-id="valley" />
+<meta name="ext-resource-dependency" content="assets/parrot.png" data-resource-id="parrot" />
+<script src="fluid.js"></script>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" data-bg-color="#0e1311"><rect width="100" height="100" fill="#0e1311"/><text x="50" y="62" text-anchor="middle" font-family="Impact,sans-serif" font-size="34" fill="#f0a81a">M</text></svg></template>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&amp;display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #0e1311; color: #f3f0e8; font-family: "DM Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #f0a81a; text-decoration: none; }
+  a:hover { color: #ffc24d; }
+  input, select, button, textarea { font: inherit; color: inherit; }
+  ::selection { background: #f0a81a; color: #0e1311; }
+  @keyframes kb { from { transform: scale(1.04) translate3d(0,0,0); } to { transform: scale(1.14) translate3d(-1.5%,-1.2%,0); } }
+  @keyframes mistA { 0% { transform: translate3d(-12%,0,0); } 50% { transform: translate3d(10%,-2%,0); } 100% { transform: translate3d(-12%,0,0); } }
+  @keyframes mistB { 0% { transform: translate3d(14%,0,0); opacity:.38 } 50% { transform: translate3d(-10%,-3%,0); opacity:.62 } 100% { transform: translate3d(14%,0,0); opacity:.38 } }
+  @keyframes bob { 0%,100% { transform: translateY(0) rotate(-1.1deg); } 50% { transform: translateY(-13px) rotate(1.1deg); } }
+  @keyframes steam { 0% { opacity:0; transform: translate(0,0) scale(.5); } 22% { opacity:.75; } 100% { opacity:0; transform: translate(-16px,-64px) scale(1.9); } }
+  @keyframes dash { to { stroke-dashoffset: -220; } }
+  @keyframes flutter { 0%,100% { transform: rotate(-4deg) skewX(0deg) scaleY(1); } 50% { transform: rotate(5deg) skewX(-6deg) scaleY(.93); } }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(240,168,26,.55); } 70% { box-shadow: 0 0 0 16px rgba(240,168,26,0); } 100% { box-shadow: 0 0 0 0 rgba(240,168,26,0); } }
+  @keyframes sway { 0%,100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+  @keyframes drift { 0% { background-position: 0 0; } 100% { background-position: 340px 0; } }
+  @keyframes marquee { from { transform: translate3d(0,0,0); } to { transform: translate3d(-50%,0,0); } }
+  @keyframes ember { 0% { transform: translate3d(0,0,0) scale(1); opacity:0; } 12% { opacity:.95; } 100% { transform: translate3d(var(--dx,20px),-340px,0) scale(.3); opacity:0; } }
+  @keyframes glow { 0%,100% { opacity:.75; } 50% { opacity:1; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+</helmet>
+
+<div style="background:#0e1311;overflow-x:hidden">
+
+  <header style="position:sticky;top:0;z-index:40;display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;padding:12px clamp(14px,4vw,40px);background:rgba(14,19,17,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(243,240,232,.1)">
+    <a href="#top" style="display:flex;align-items:center;gap:10px;flex:0 0 auto">
+      <img src="assets/parrot.png" alt="Misfits" style="width:38px;height:38px;object-fit:contain;display:block;transform-origin:50% 90%;animation:sway 7s ease-in-out infinite" />
+      <span style="font-family:Anton,sans-serif;font-size:20px;letter-spacing:.06em;color:#f3f0e8;text-transform:uppercase;line-height:1">Misfits</span>
+    </a>
+    <nav style="display:flex;flex-wrap:wrap;gap:4px 18px;flex:1 1 320px;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:rgba(243,240,232,.62)">
+      <a href="#rooms" style="color:inherit">Rooms</a>
+      <sc-if value="{{ isShoja }}" hint-placeholder-val="{{ true }}"><a href="#bed" style="color:inherit">The bed</a></sc-if>
+      <a href="#cafe" style="color:inherit">Cafe</a>
+      <a href="#valley" style="color:inherit">Valley</a>
+      <a href="#gallery" style="color:inherit">Gallery</a>
+      <a href="#reach" style="color:inherit">Getting here</a>
+    </nav>
+    <div role="tablist" aria-label="Choose property" style="display:flex;gap:3px;padding:3px;border:1px solid rgba(243,240,232,.2);border-radius:3px;flex:0 0 auto">
+      <sc-for list="{{ locTabs }}" as="t" hint-placeholder-count="2">
+        <button onClick="{{ t.go }}" role="tab" style="background:{{ t.bg }};color:{{ t.fg }};border:0;padding:7px 13px;font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:background .3s ease,color .3s ease">{{ t.label }}</button>
+      </sc-for>
+    </div>
+    <a href="#book" style="flex:0 0 auto;background:{{ accent }};color:#0e1311;font-weight:700;font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;padding:10px 18px;border-radius:2px">Book direct</a>
+  </header>
+
+  <!-- ===================== HERO: two houses ===================== -->
+  <section id="top" data-screen-label="Hero" style="position:relative;display:flex;flex-wrap:wrap;min-height:clamp(600px,90vh,960px);background:#0e1311;overflow:hidden">
+    <sc-for list="{{ heroPanels }}" as="h" hint-placeholder-count="0">
+      <div onMouseEnter="{{ h.enter }}" onMouseLeave="{{ h.leave }}" style="position:relative;flex:{{ h.grow }} 1 340px;min-height:clamp(420px,48vh,960px);overflow:hidden;transition:flex-grow .9s cubic-bezier(.2,.7,.2,1);border-right:1px solid rgba(243,240,232,.14)">
+        <img src="{{ h.img }}" alt="{{ h.alt }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:{{ h.pos }};display:block;filter:saturate(.95) contrast(1.04);animation:kb 54s ease-in-out infinite alternate;transform-origin:50% 60%" />
+        <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(14,19,17,.55) 0%,rgba(14,19,17,.05) 26%,rgba(14,19,17,.45) 40%,rgba(14,19,17,.78) 54%,rgba(14,19,17,.96) 100%)"></div>
+        <div style="position:absolute;left:0;right:0;bottom:0;height:72%;pointer-events:none;background:radial-gradient(120% 90% at 0% 100%,rgba(14,19,17,.72),rgba(14,19,17,0) 70%)"></div>
+        <div style="position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 clamp(18px,3.4vw,52px) clamp(26px,3.6vw,52px);display:flex;flex-direction:column;gap:14px">
+          <p style="margin:0;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:{{ accent }}">{{ h.region }}</p>
+          <h1 style="margin:0;font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;line-height:.86;font-size:clamp(58px,9vw,150px);color:#f7f5ef">{{ h.name }}</h1>
+          <p style="margin:0;max-width:36ch;font-size:clamp(14.5px,1.15vw,16.5px);line-height:1.55;color:rgba(243,240,232,.82)">{{ h.tagline }}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:4px">
+            <button onClick="{{ h.explore }}" style="background:{{ accent }};color:#0e1311;border:0;font-weight:700;font-size:13.5px;letter-spacing:.07em;text-transform:uppercase;padding:13px 20px;border-radius:2px;cursor:pointer">Explore {{ h.name }} →</button>
+            <span style="display:flex;align-items:center;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,240,232,.62);padding:0 6px">{{ h.alt2 }}</span>
+          </div>
+        </div>
+      </div>
+    </sc-for>
+    <x-import component-from-global-scope="misfits-mist" hint-size="100%,100%" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1"></x-import>
+    <div style="position:absolute;top:clamp(16px,3vw,30px);left:0;right:0;z-index:2;text-align:center;pointer-events:none">
+      <p style="margin:0;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:rgba(243,240,232,.78)">Misfits Hostel &amp; Cafe · Two houses in the Himalaya</p>
+    </div>
+    <div style="position:absolute;left:50%;top:clamp(44px,8vh,96px);width:min(12vw,19vh,180px);min-width:84px;transform:translateX(-50%);z-index:3;pointer-events:none">
+      <div style="position:relative;animation:bob 4.2s ease-in-out infinite">
+        <x-import component-from-global-scope="misfits-ink-logo" src="{{ logoSrc }}" hint-size="100%,100%" style="width:100%;display:block"></x-import>
+        <sc-for list="{{ steam }}" as="s" hint-placeholder-count="3">
+          <span style="position:absolute;left:11%;top:29%;width:12px;height:12px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.9),rgba(255,255,255,0) 70%);animation:steam 3.6s ease-out infinite;animation-delay:{{ s }}"></span>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:16px clamp(16px,5vw,64px);background:#151c19;border-bottom:1px solid rgba(243,240,232,.1)">
+    <span style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(243,240,232,.56)">You are looking at</span>
+    <span style="font-family:Anton,sans-serif;font-size:24px;text-transform:uppercase;color:#f3f0e8;line-height:1">Misfits {{ L.name }}</span>
+    <span style="font-size:13.5px;color:rgba(243,240,232,.6)">{{ L.region }}</span>
+    <button onClick="{{ swapLoc }}" style="margin-left:auto;background:none;border:1px solid rgba(240,168,26,.55);color:{{ accent }};font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:9px 14px;border-radius:2px;cursor:pointer">Switch to {{ L.other }} ⇄</button>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;border-top:1px solid rgba(243,240,232,.1);border-bottom:1px solid rgba(243,240,232,.1)">
+    <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
+      <div style="flex:1 1 200px;padding:22px clamp(16px,3vw,32px);border-right:1px solid rgba(243,240,232,.08)">
+        <p style="margin:0;font-family:Anton,sans-serif;font-size:clamp(24px,2.4vw,34px);text-transform:uppercase;color:#f3f0e8;line-height:1">{{ f.v }}</p>
+        <p style="margin:6px 0 0;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(243,240,232,.52)">{{ f.k }}</p>
+      </div>
+    </sc-for>
+  </div>
+
+  <div aria-hidden="true" style="overflow:hidden;border-bottom:1px solid rgba(243,240,232,.1);padding:18px 0;background:#0b0f0d">
+    <div style="display:flex;width:max-content;animation:marquee 46s linear infinite">
+      <sc-for list="{{ marquee }}" as="w" hint-placeholder-count="16">
+        <span style="display:flex;align-items:center;gap:28px;padding-right:28px;font-family:Anton,sans-serif;font-size:clamp(26px,3.4vw,46px);text-transform:uppercase;letter-spacing:.02em;line-height:1;white-space:nowrap;color:{{ w.c }};-webkit-text-stroke:{{ w.stroke }}">{{ w.t }}<span style="width:9px;height:9px;border-radius:50%;background:{{ accent }};display:block;flex:0 0 auto;-webkit-text-stroke:0"></span></span>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ===================== ROOMS ===================== -->
+  <section id="rooms" data-screen-label="Rooms" style="position:relative;overflow:hidden;padding:clamp(56px,7vw,110px) clamp(16px,5vw,64px)">
+    <span aria-hidden="true" style="position:absolute;top:clamp(10px,2vw,30px);right:clamp(8px,3vw,40px);font-family:Anton,sans-serif;font-size:clamp(120px,20vw,300px);line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(243,240,232,.09);pointer-events:none;user-select:none">01</span>
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:clamp(28px,3vw,48px)">
+      <div>
+        <p style="margin:0 0 10px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:{{ accent }}">01 — Where you sleep · {{ L.name }}</p>
+        <h2 style="margin:0;font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(32px,5vw,68px);line-height:.94;letter-spacing:-.005em">{{ L.roomsA }}<br />{{ L.roomsB }}</h2>
+      </div>
+      <p style="margin:0;max-width:30ch;font-size:15px;line-height:1.6;color:rgba(243,240,232,.66)">{{ L.roomsIntro }}</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(14px,1.6vw,22px)">
+      <sc-for list="{{ rooms }}" as="r" hint-placeholder-count="0">
+        <article data-reveal="y24" style="background:#151c19;border:1px solid rgba(243,240,232,.09);display:flex;flex-direction:column;transition:opacity .85s ease,transform .85s cubic-bezier(.2,.7,.2,1)">
+          <div style="aspect-ratio:4/3;overflow:hidden;background:#0e1311;position:relative">
+            <span style="position:absolute;top:14px;left:14px;z-index:1;display:flex;align-items:baseline;gap:6px;background:rgba(14,19,17,.78);backdrop-filter:blur(8px);padding:8px 12px;border-radius:2px;pointer-events:none"><span style="font-family:Anton,sans-serif;font-size:20px;color:{{ accent }};line-height:1">{{ r.price }}</span><span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,240,232,.7)">/ night</span></span>
+            <img src="{{ r.img }}" alt="{{ r.name }}" style="width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.92);transition:transform 1.2s cubic-bezier(.2,.7,.2,1),filter .6s ease" style-hover="transform:scale(1.07);filter:saturate(1.05)" />
+          </div>
+          <div style="padding:20px 20px 22px;display:flex;flex-direction:column;gap:12px;flex:1">
+            <h3 style="margin:0;font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:24px;letter-spacing:.01em">{{ r.name }}</h3>
+            <p style="margin:0;font-size:14.5px;line-height:1.6;color:rgba(243,240,232,.66)">{{ r.blurb }}</p>
+            <ul style="margin:auto 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px">
+              <sc-for list="{{ r.tags }}" as="t" hint-placeholder-count="3">
+                <li style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(243,240,232,.62);border:1px solid rgba(243,240,232,.16);padding:5px 9px">{{ t }}</li>
+              </sc-for>
+            </ul>
+            <a href="#book" style="display:flex;justify-content:space-between;align-items:center;margin-top:6px;padding-top:14px;border-top:1px solid rgba(243,240,232,.1);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:{{ accent }}">Reserve this room <span style="font-size:18px;line-height:1">→</span></a>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ===================== THE BED (Shoja) ===================== -->
+  <sc-if value="{{ isShoja }}" hint-placeholder-val="{{ true }}">
+  <section id="bed" data-screen-label="Bed cutaway" style="background:#131a17;border-top:1px solid rgba(243,240,232,.1);padding:clamp(56px,7vw,100px) clamp(16px,5vw,64px)">
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,48px);align-items:flex-start">
+      <div style="flex:1 1 280px;min-width:min(100%,260px);max-width:420px">
+        <p style="margin:0 0 10px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:{{ accent }}">02 — The bed, up close</p>
+        <h2 style="margin:0 0 16px;font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(30px,4vw,52px);line-height:.95">A dorm bed<br />with a door</h2>
+        <p style="margin:0 0 22px;font-size:15px;line-height:1.65;color:rgba(243,240,232,.68)">Our bunks are built as pods: a steel frame, a black privacy back and side, a lockable drawer under the lower bunk, and your own light and socket. Walk around it.</p>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <sc-for list="{{ bunkSpots }}" as="s" hint-placeholder-count="5">
+            <button onClick="{{ s.go }}" style="text-align:left;background:{{ s.bg }};border:1px solid {{ s.bd }};color:#f3f0e8;padding:13px 15px;cursor:pointer;display:flex;gap:12px;align-items:baseline;border-radius:2px">
+              <span style="font-family:Anton,sans-serif;font-size:13px;color:{{ accent }};min-width:18px">{{ s.n }}</span>
+              <span style="display:block">
+                <span style="display:block;font-size:14.5px;font-weight:500">{{ s.title }}</span>
+                <span style="display:block;font-size:13px;color:rgba(243,240,232,.6);line-height:1.5;margin-top:2px">{{ s.note }}</span>
+              </span>
+            </button>
+          </sc-for>
+        </div>
+      </div>
+      <div style="flex:1 1 460px;min-width:min(100%,280px);position:relative;background:#0e1311;border:1px solid rgba(243,240,232,.1);overflow:hidden">
+        <img src="assets/pod-dorm.jpg" alt="Pod bunks in the mixed dorm" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block;filter:saturate(.94);transition:transform 1.1s cubic-bezier(.2,.7,.2,1);transform:scale({{ bedZoom }});transform-origin:{{ bedOrigin }}" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,19,17,0) 52%,rgba(14,19,17,.88) 100%);pointer-events:none"></div>
+        <sc-for list="{{ bedMarks }}" as="m" hint-placeholder-count="4">
+          <button onClick="{{ m.go }}" aria-label="{{ m.title }}" style="position:absolute;left:{{ m.x }};top:{{ m.y }};width:{{ m.size }};height:{{ m.size }};margin:-9px 0 0 -9px;border-radius:50%;border:2px solid #f7f5ef;background:{{ m.fill }};cursor:pointer;padding:0;animation:pulse 2.6s ease-out infinite;animation-delay:{{ m.delay }}"></button>
+        </sc-for>
+        <div style="position:absolute;left:0;right:0;bottom:0;padding:18px 20px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline">
+          <p style="margin:0;font-family:Anton,sans-serif;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:{{ accent }}">{{ bedCaption.title }}</p>
+          <p style="margin:0;font-size:14px;line-height:1.5;color:rgba(243,240,232,.82);flex:1 1 200px">{{ bedCaption.note }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </sc-if>
+
+  <!-- ===================== CAFE ===================== -->
+  <section id="cafe" data-screen-label="Cafe" style="position:relative;overflow:hidden;padding:clamp(56px,7vw,110px) clamp(16px,5vw,64px);border-top:1px solid rgba(243,240,232,.1)">
+    <span aria-hidden="true" style="position:absolute;top:clamp(10px,2vw,30px);right:clamp(8px,3vw,40px);font-family:Anton,sans-serif;font-size:clamp(120px,20vw,300px);line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(243,240,232,.09);pointer-events:none;user-select:none">03</span>
+    <p style="margin:0 0 10px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:{{ accent }}">03 — Misfits Cafe · {{ L.name }}</p>
+    <h2 style="margin:0 0 clamp(26px,3vw,44px);font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(32px,5vw,68px);line-height:.94">Open 8 am till 10 pm</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(14px,2vw,28px);align-items:stretch">
+      <div style="position:relative;min-height:340px;padding:0 clamp(18px,4vw,56px) clamp(40px,5vw,70px) 0">
+        <div style="overflow:hidden;height:100%;min-height:320px">
+          <img src="{{ L.cafeImg }}" alt="{{ L.cafeAlt }}" style="width:100%;height:100%;min-height:320px;object-fit:cover;display:block;filter:saturate(.9)" />
+        </div>
+        <div style="position:absolute;right:0;bottom:0;width:clamp(150px,42%,260px);background:#efe8d8;padding:9px 9px 34px;transform:rotate(4deg);box-shadow:0 24px 40px rgba(0,0,0,.45)">
+          <img src="{{ L.polaroid }}" alt="{{ L.polaroidCap }}" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block" />
+          <span style="position:absolute;left:12px;bottom:9px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#3a3a33">{{ L.polaroidCap }}</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;justify-content:space-between;gap:24px">
+        <p style="margin:0;font-size:clamp(17px,1.7vw,22px);line-height:1.5;color:rgba(243,240,232,.82)">{{ L.cafeText }}</p>
+        <div style="display:flex;flex-direction:column;gap:0">
+          <sc-for list="{{ cafeRows }}" as="c" hint-placeholder-count="4">
+            <div style="display:flex;align-items:baseline;gap:12px;padding:14px 0">
+              <span style="font-size:15px;letter-spacing:.01em;color:#f3f0e8;flex:0 1 auto">{{ c.a }}</span>
+              <span style="flex:1 1 24px;border-bottom:1px dotted rgba(243,240,232,.3);transform:translateY(-4px)"></span>
+              <span style="font-family:Anton,sans-serif;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:{{ accent }};text-align:right;flex:0 0 auto">{{ c.b }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VALLEY ===================== -->
+  <section id="valley" data-screen-label="Valley" style="position:relative;border-top:1px solid rgba(243,240,232,.1)">
+    <div style="position:relative;height:clamp(300px,48vh,520px);overflow:hidden">
+      <img src="{{ L.valleyImg }}" alt="{{ L.valleyAlt }}" style="width:100%;height:100%;object-fit:cover;object-position:{{ L.valleyPos }};display:block;filter:saturate(.88) contrast(1.02)" />
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,19,17,.45),rgba(14,19,17,.1) 40%,rgba(14,19,17,.95))"></div>
+      <div style="position:absolute;left:0;bottom:0;padding:0 clamp(16px,5vw,64px) clamp(24px,3vw,44px)">
+        <p style="margin:0 0 10px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:{{ accent }}">04 — {{ L.valleyEyebrow }}</p>
+        <h2 style="margin:0;font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(30px,5.4vw,74px);line-height:.92">{{ L.valleyA }}<br />{{ L.valleyB }}</h2>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1px;background:rgba(243,240,232,.12)">
+      <sc-for list="{{ nearby }}" as="p" hint-placeholder-count="6">
+        <div data-reveal="y18" style-hover="background:#151c19" style="background:#0e1311;padding:24px clamp(16px,2.4vw,28px) 26px;display:flex;flex-direction:column;gap:10px;transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+            <span style="width:30px;height:30px;border-radius:50%;border:1.5px solid {{ accent }};display:flex;align-items:center;justify-content:center;font-family:Anton,sans-serif;font-size:13px;color:{{ accent }};flex:0 0 auto">{{ p.n }}</span>
+            <span style="flex:1;height:2px;background-image:repeating-linear-gradient(90deg,rgba(240,168,26,.55) 0 6px,transparent 6px 14px);background-size:340px 2px;animation:drift 9s linear infinite"></span>
+          </div>
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px">
+            <h3 style="margin:0;font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:21px;letter-spacing:.01em">{{ p.name }}</h3>
+            <span style="font-family:Anton,sans-serif;font-size:14px;color:{{ accent }};white-space:nowrap">{{ p.dist }}</span>
+          </div>
+          <p style="margin:0;font-size:14px;line-height:1.6;color:rgba(243,240,232,.62)">{{ p.note }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ===================== GALLERY ===================== -->
+  <section id="gallery" data-screen-label="Gallery" style="padding:clamp(56px,7vw,110px) clamp(16px,5vw,64px)">
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:clamp(22px,2.6vw,38px)">
+      <h2 style="margin:0;font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(30px,4.6vw,62px);line-height:.94">The place itself · {{ L.name }}</h2>
+      <p style="margin:0;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(243,240,232,.5)">Tap any frame to enlarge</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:clamp(8px,1vw,14px)">
+      <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="0">
+        <button onClick="{{ g.open }}" data-reveal="s20" style="border:0;padding:0;background:#151c19;cursor:zoom-in;aspect-ratio:4/3;overflow:hidden;display:block;transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)">
+          <img src="{{ g.src }}" alt="{{ g.alt }}" style="width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9);transition:transform 1.2s cubic-bezier(.2,.7,.2,1),filter .6s ease" style-hover="transform:scale(1.06);filter:saturate(1.08)" />
+        </button>
+      </sc-for>
+    </div>
+  </section>
+
+  <sc-if value="{{ lightbox }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeLightbox }}" style="position:fixed;inset:0;z-index:90;background:rgba(8,11,10,.94);display:flex;align-items:center;justify-content:center;padding:clamp(12px,4vw,56px);cursor:zoom-out">
+      <img src="{{ lightbox }}" alt="" style="max-width:100%;max-height:100%;object-fit:contain;display:block" />
+      <span style="position:absolute;top:18px;right:22px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,240,232,.6)">Close ✕</span>
+    </div>
+  </sc-if>
+
+  <!-- ===================== NOTES / REVIEWS ===================== -->
+  <section data-screen-label="Reviews" style="padding:clamp(48px,6vw,96px) clamp(16px,5vw,64px);background:#131a17;border-top:1px solid rgba(243,240,232,.1)">
+    <p style="margin:0 0 10px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:{{ accent }}">05 — Guest notes</p>
+    <h2 style="margin:0 0 clamp(24px,3vw,40px);font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(28px,4.2vw,56px);line-height:.95">What people write<br />on the way out</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(22px,2.6vw,36px)">
+      <sc-for list="{{ notes }}" as="n" hint-placeholder-count="3">
+        <blockquote style="position:relative;margin:14px 6px 0;background:#efe8d8;padding:34px 26px 26px;display:flex;flex-direction:column;gap:16px;transform:rotate({{ n.rot }});box-shadow:0 26px 40px rgba(0,0,0,.42);transition:transform .5s cubic-bezier(.2,.7,.2,1)" style-hover="transform:rotate(0deg) translateY(-6px)">
+          <span aria-hidden="true" style="position:absolute;top:-12px;left:50%;width:96px;height:26px;margin-left:-48px;background:rgba(240,168,26,.72);transform:rotate(-3deg)"></span>
+          <span aria-hidden="true" style="font-family:Anton,sans-serif;font-size:56px;line-height:.5;color:#c9601f;height:22px">“</span>
+          <p style="margin:0;font-size:17px;line-height:1.6;color:#1f211d">{{ n.text }}</p>
+          <footer style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#5c5a50;border-top:1px solid rgba(31,33,29,.16);padding-top:12px">{{ n.who }}</footer>
+        </blockquote>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ===================== EVENTS ===================== -->
+  <section data-screen-label="Events" style="position:relative;overflow:hidden;padding:clamp(48px,6vw,96px) clamp(16px,5vw,64px)">
+    <div aria-hidden="true" style="position:absolute;left:-10%;bottom:-40%;width:70%;height:110%;background:radial-gradient(closest-side,rgba(226,112,58,.30),rgba(240,168,26,.10) 55%,rgba(240,168,26,0));pointer-events:none;animation:glow 4.5s ease-in-out infinite"></div>
+    <sc-for list="{{ embers }}" as="em" hint-placeholder-count="14">
+      <span aria-hidden="true" style="position:absolute;left:{{ em.x }};bottom:-10px;width:{{ em.s }};height:{{ em.s }};border-radius:50%;background:#ffb547;box-shadow:0 0 10px 2px rgba(255,150,40,.7);pointer-events:none;animation:ember {{ em.dur }} ease-out infinite;animation-delay:{{ em.d }};--dx:{{ em.dx }}"></span>
+    </sc-for>
+    <div aria-hidden="true" style="display:flex;gap:4px;justify-content:flex-start;margin:0 0 clamp(26px,3vw,44px);overflow:hidden">
+      <sc-for list="{{ flags }}" as="fl" hint-placeholder-count="14">
+        <span style="width:22px;height:30px;flex:0 0 auto;background:{{ fl.c }};clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top center;animation:flutter 2.8s ease-in-out infinite;animation-delay:{{ fl.d }}"></span>
+      </sc-for>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,64px)">
+      <div style="flex:1 1 260px;max-width:34ch">
+        <p style="margin:0 0 10px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:{{ accent }}">06 — Evenings</p>
+        <h2 style="margin:0 0 14px;font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(28px,4vw,52px);line-height:.95">Jams, fires,<br />and quiet</h2>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:rgba(243,240,232,.66)">Nothing is compulsory. If the sky is clear there is a fire; if someone has a guitar there is a jam; if it rains everyone reads.</p>
+      </div>
+      <div style="flex:2 1 340px;display:flex;flex-direction:column">
+        <sc-for list="{{ events }}" as="e" hint-placeholder-count="4">
+          <div data-reveal="x16" style="display:flex;flex-wrap:wrap;gap:6px 20px;align-items:baseline;padding:18px 0;border-top:1px solid rgba(243,240,232,.12);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)">
+            <span style="font-family:Anton,sans-serif;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:{{ accent }};flex:0 0 110px">{{ e.when }}</span>
+            <span style="font-size:17px;flex:1 1 160px">{{ e.what }}</span>
+            <span style="font-size:13.5px;color:rgba(243,240,232,.56);flex:1 1 180px">{{ e.note }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GETTING HERE ===================== -->
+  <section id="reach" data-screen-label="Getting here" style="position:relative;overflow:hidden;padding:clamp(48px,6vw,96px) clamp(16px,5vw,64px);background:#131a17;border-top:1px solid rgba(243,240,232,.1)">
+    <span aria-hidden="true" style="position:absolute;top:clamp(10px,2vw,30px);right:clamp(8px,3vw,40px);font-family:Anton,sans-serif;font-size:clamp(120px,20vw,300px);line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(243,240,232,.09);pointer-events:none;user-select:none">07</span>
+    <svg aria-hidden="true" viewBox="0 0 1200 400" preserveAspectRatio="none" style="position:absolute;left:0;bottom:0;width:100%;height:70%;pointer-events:none;opacity:.5">
+      <g fill="none" stroke="rgba(243,240,232,.07)" stroke-width="1.2">
+        <path d="M0 330 C 160 270 280 350 430 300 S 720 210 880 260 S 1100 320 1200 270" />
+        <path d="M0 360 C 170 300 300 380 450 330 S 740 240 900 290 S 1110 350 1200 300" />
+        <path d="M0 300 C 150 240 270 320 420 270 S 700 180 860 230 S 1090 290 1200 240" />
+        <path d="M0 270 C 140 210 260 290 410 240 S 680 150 840 200 S 1080 260 1200 210" />
+        <path d="M0 390 C 180 330 320 400 470 360 S 760 270 920 320 S 1120 380 1200 330" />
+      </g>
+    </svg>
+    <p style="margin:0 0 10px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:{{ accent }}">07 — Getting here</p>
+    <h2 style="margin:0 0 clamp(26px,3vw,44px);font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(30px,4.6vw,62px);line-height:.94">{{ L.reachA }}<br />{{ L.reachB }}</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(14px,2vw,26px)">
+      <sc-for list="{{ route }}" as="s" hint-placeholder-count="4">
+        <div data-reveal="y18" style="position:relative;transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+            <span style="width:44px;height:44px;border-radius:50%;background:{{ accent }};color:#0e1311;display:flex;align-items:center;justify-content:center;font-family:Anton,sans-serif;font-size:17px;flex:0 0 auto">{{ s.n }}</span>
+            <span style="flex:1;height:2px;background-image:repeating-linear-gradient(90deg,rgba(240,168,26,.6) 0 8px,transparent 8px 16px);background-size:340px 2px;animation:drift 7s linear infinite"></span>
+          </div>
+          <p style="margin:0 0 8px;font-family:Anton,sans-serif;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:{{ accent }}">{{ s.leg }}</p>
+          <h3 style="margin:0 0 8px;font-size:17px;font-weight:500">{{ s.title }}</h3>
+          <p style="margin:0;font-size:14px;line-height:1.6;color:rgba(243,240,232,.64)">{{ s.note }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ===================== BOOK ===================== -->
+  <section id="book" data-screen-label="Book" style="position:relative;overflow:hidden;padding:clamp(64px,8vw,130px) clamp(16px,5vw,64px);border-top:1px solid rgba(243,240,232,.1)">
+    <img src="{{ L.bookImg }}" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.8)" />
+    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(14,19,17,.95) 0%,rgba(14,19,17,.86) 45%,rgba(14,19,17,.7) 100%)"></div>
+    <div style="position:relative;display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,56px);align-items:flex-start">
+      <div style="flex:1 1 300px;max-width:38ch">
+        <p style="margin:0 0 10px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:{{ accent }}">08 — Book direct</p>
+        <h2 style="margin:0 0 16px;font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(32px,5vw,68px);line-height:.92">Talk to us,<br />not a portal</h2>
+        <p style="margin:0 0 18px;font-size:15.5px;line-height:1.65;color:rgba(243,240,232,.7)">Booking direct is cheaper for you and easier for us. Fill this in and it opens a message to the front desk with your dates already written.</p>
+        <p style="margin:0;font-size:14px;line-height:1.7;color:rgba(243,240,232,.56)">{{ L.address }}<br />{{ phone }}</p>
+      </div>
+      <form onSubmit="{{ submit }}" style="flex:1 1 380px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:12px;background:rgba(21,28,25,.72);backdrop-filter:blur(14px);border:1px solid rgba(243,240,232,.16);border-top:3px solid {{ accent }};padding:clamp(20px,2.6vw,34px);box-shadow:0 40px 80px rgba(0,0,0,.45)">
+        <div style="grid-column:1/-1;display:flex;flex-direction:column;gap:7px">
+          <span style="font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,240,232,.56)">Property</span>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+            <sc-for list="{{ locTabs }}" as="t" hint-placeholder-count="2">
+              <button type="button" onClick="{{ t.go }}" style="background:{{ t.bg }};color:{{ t.fg }};border:1px solid rgba(243,240,232,.18);padding:12px;font-size:13.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;border-radius:2px">{{ t.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <label style="display:flex;flex-direction:column;gap:7px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,240,232,.56)">Arriving
+          <input type="date" value="{{ form.date }}" onChange="{{ setDate }}" style="background:#0e1311;border:1px solid rgba(243,240,232,.18);padding:12px;border-radius:2px;font-size:14.5px;letter-spacing:0;text-transform:none;color:#f3f0e8" />
+        </label>
+        <label style="display:flex;flex-direction:column;gap:7px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,240,232,.56)">Nights
+          <input type="number" min="1" max="60" value="{{ form.nights }}" onChange="{{ setNights }}" style="background:#0e1311;border:1px solid rgba(243,240,232,.18);padding:12px;border-radius:2px;font-size:14.5px;letter-spacing:0;text-transform:none;color:#f3f0e8" />
+        </label>
+        <label style="display:flex;flex-direction:column;gap:7px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,240,232,.56)">Guests
+          <input type="number" min="1" max="12" value="{{ form.guests }}" onChange="{{ setGuests }}" style="background:#0e1311;border:1px solid rgba(243,240,232,.18);padding:12px;border-radius:2px;font-size:14.5px;letter-spacing:0;text-transform:none;color:#f3f0e8" />
+        </label>
+        <label style="display:flex;flex-direction:column;gap:7px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,240,232,.56);grid-column:1/-1">Room
+          <select value="{{ form.room }}" onChange="{{ setRoom }}" style="background:#0e1311;border:1px solid rgba(243,240,232,.18);padding:12px;border-radius:2px;font-size:14.5px;letter-spacing:0;text-transform:none;color:#f3f0e8">
+            <sc-for list="{{ roomNames }}" as="rn" hint-placeholder-count="4">
+              <option value="{{ rn }}">{{ rn }}</option>
+            </sc-for>
+          </select>
+        </label>
+        <button type="submit" style="grid-column:1/-1;margin-top:4px;background:{{ accent }};color:#0e1311;border:0;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:15px;cursor:pointer;border-radius:2px">Send on WhatsApp</button>
+        <p style="grid-column:1/-1;margin:0;font-size:12.5px;line-height:1.6;color:rgba(243,240,232,.46)">{{ formHint }}</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section data-screen-label="FAQ" style="padding:0 clamp(16px,5vw,64px) clamp(56px,7vw,100px)">
+    <h2 style="margin:0 0 clamp(20px,2.4vw,34px);font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(26px,3.6vw,46px);line-height:.96">Before you ask</h2>
+    <div style="display:flex;flex-direction:column">
+      <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="6">
+        <div style="border-top:1px solid rgba(243,240,232,.13)">
+          <button onClick="{{ q.toggle }}" style="width:100%;background:none;border:0;padding:20px 0;display:flex;gap:18px;align-items:baseline;justify-content:space-between;cursor:pointer;text-align:left;color:#f3f0e8">
+            <span style="font-size:clamp(16px,1.5vw,19px);font-weight:500">{{ q.q }}</span>
+            <span style="width:32px;height:32px;border-radius:50%;border:1px solid rgba(240,168,26,.5);display:flex;align-items:center;justify-content:center;font-family:Anton,sans-serif;font-size:17px;color:{{ accent }};flex:0 0 auto">{{ q.sign }}</span>
+          </button>
+          <p style="margin:0;padding:0 0 20px;max-width:70ch;font-size:15px;line-height:1.7;color:rgba(243,240,232,.66);display:{{ q.display }}">{{ q.a }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <div aria-hidden="true" style="border-top:1px solid rgba(243,240,232,.12);overflow:hidden;padding:clamp(20px,3vw,40px) clamp(10px,2vw,24px) 0">
+    <p style="margin:0;font-family:Anton,sans-serif;font-size:clamp(80px,21vw,330px);line-height:.82;text-transform:uppercase;letter-spacing:-.01em;text-align:center;color:transparent;-webkit-text-stroke:1.5px rgba(240,168,26,.38);white-space:nowrap">Misfits</p>
+  </div>
+  <footer style="padding:clamp(30px,4vw,54px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between">
+    <div style="display:flex;align-items:flex-end;gap:16px">
+      <img src="assets/parrot.png" alt="" style="width:64px;height:64px;object-fit:contain;display:block;animation:bob 5.4s ease-in-out infinite" />
+      <div>
+        <p style="margin:0;font-family:Anton,sans-serif;font-size:clamp(28px,4vw,52px);text-transform:uppercase;line-height:.9">Misfits</p>
+        <p style="margin:4px 0 0;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(243,240,232,.5)">Hostel &amp; Cafe · Shoja</p>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px 26px;font-size:13.5px;color:rgba(243,240,232,.6)">
+      <a href="#book" style="color:inherit">Book direct</a>
+      <a href="#reach" style="color:inherit">Getting here</a>
+      <a href="{{ waPlain }}" style="color:inherit">WhatsApp</a>
+      <span>{{ year }}</span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;accent&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#f0a81a&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#f0a81a&quot;, &quot;#1f7a5c&quot;, &quot;#e2703a&quot;, &quot;#d8cfbc&quot;], &quot;section&quot;: &quot;Brand&quot; },
+  &quot;whatsapp&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;+91 98765 43210&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Contact&quot; },
+  &quot;rateDorm&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;₹699&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Shoja rates&quot; },
+  &quot;ratePrivate&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;₹2,200&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Shoja rates&quot; },
+  &quot;rateFamily&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;₹3,400&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Shoja rates&quot; },
+  &quot;rateKasolDorm&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;₹599&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Kasol rates&quot; },
+  &quot;rateKasolDorm2&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;₹549&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Kasol rates&quot; },
+  &quot;rateKasolPrivate&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;₹1,800&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Kasol rates&quot; }
+}">
+const R = (p) => { const id = p.replace(/^assets\//, '').replace(/\.jpg$/, ''); return (window.__resources && window.__resources[id]) || p; };
+class Component extends DCLogic {
+  state = {
+    bunkView: 'wide',
+    openFaq: 0,
+    lightbox: null,
+    loc: 'shoja', hov: null,
+    form: { date: '', nights: 2, guests: 1, room: '' }
+  };
+
+  componentDidMount() {
+    // Markup renders VISIBLE; the hidden state is applied here, so no-JS,
+    // throttled-rAF, print and crawler renders always show the content.
+    const HID = {
+      y24: 'translateY(24px)', y18: 'translateY(18px)',
+      s20: 'translateY(20px) scale(.985)', x16: 'translateX(-16px)'
+    };
+    const all = () => [...document.querySelectorAll('[data-reveal]')];
+    const show = el => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const canObserve = typeof IntersectionObserver === 'function';
+
+    if (!reduced && canObserve) {
+      all().forEach(el => {
+        if (el.dataset.revealed) return;
+        el.style.opacity = '0';
+        el.style.transform = HID[el.dataset.reveal] || HID.y18;
+      });
+      this._io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          e.target.dataset.revealed = '1';
+          show(e.target);
+          this._io.unobserve(e.target);
+        });
+      }, { rootMargin: '0px 0px -12% 0px' });
+      all().forEach(el => this._io.observe(el));
+    }
+    // failsafe: whatever happened above, nothing stays hidden
+    this._t = setTimeout(() => all().forEach(el => { el.dataset.revealed = '1'; show(el); }), 2200);
+
+    const layers = () => [...document.querySelectorAll('[data-parallax]')];
+    let raf = 0;
+    this._scroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        if (y > window.innerHeight * 1.3) return;
+        layers().forEach(el => {
+          el.style.transform = 'translate3d(0,' + (y * parseFloat(el.dataset.parallax)).toFixed(1) + 'px,0)';
+        });
+      });
+    };
+    window.addEventListener('scroll', this._scroll, { passive: true });
+  }
+
+  componentWillUnmount() {
+    this._io && this._io.disconnect();
+    clearTimeout(this._t);
+    window.removeEventListener('scroll', this._scroll);
+  }
+
+  renderVals() {
+    const p = this.props;
+    const accent = p.accent ?? '#f0a81a';
+    const wa = (p.whatsapp ?? '+91 98765 43210').replace(/[^0-9]/g, '');
+    const set = (k) => (e) => this.setState(s => ({ form: { ...s.form, [k]: e.target.value } }));
+
+    const LOC = {
+      shoja: {
+        key: 'shoja', name: 'Shoja', other: 'Kasol', region: 'Tirthan Valley · 2,600 m',
+        heroImg: R('assets/ridge-hostel.jpg'), heroAlt: 'Misfits Shoja on the ridge', heroPos: '60% 55%',
+        tagline: 'Stone walls and yellow windows on the road above Banjar, where the cedar forest starts and the phone signal gives up.',
+        alt2: '11 km from Jalori Pass',
+        roomsA: 'Four rooms,', roomsB: 'one long balcony',
+        roomsIntro: 'Every room faces the valley. Rates are per night and include bedding, hot water and unreasonable amounts of view.',
+        rooms: [
+          { name: 'Mixed dorm', price: p.rateDorm ?? '₹699', img: R('assets/pod-dorm.jpg'),
+            blurb: 'Six pod bunks, each with a privacy panel, reading light, socket and a lockable drawer. Balcony door stays open till it gets cold.',
+            tags: ['6 beds', 'Locker', 'Valley balcony'] },
+          { name: 'Private double', price: p.ratePrivate ?? '₹2,200', img: R('assets/private-room.jpg'),
+            blurb: 'Pine walls, a wide bed, a kettle and a window that frames the whole forest. Attached bath with hot water all day.',
+            tags: ['2 guests', 'Attached bath', 'Kettle'] },
+          { name: 'Family room', price: p.rateFamily ?? '₹3,400', img: R('assets/family-room.jpg'),
+            blurb: 'A double bed plus a bunk, a private balcony and enough floor for four rucksacks. The one people book for a week.',
+            tags: ['Up to 4', 'Balcony', 'Attached bath'] }
+        ],
+        facts: [
+          { v: '2,600 m', k: 'Above sea level' }, { v: '11 km', k: 'From Jalori Pass' },
+          { v: '8 am–10 pm', k: 'Cafe hours' }, { v: '4 floors', k: 'All facing the valley' }
+        ],
+        marquee: ['Bunks', 'Chai', 'Bonfires', 'Deodar forest', 'Jalori Pass', 'Trout streams', 'Long stays', 'Open mic'],
+        cafeImg: R('assets/cafe-window.jpg'), cafeAlt: 'Cafe window seat',
+        polaroid: R('assets/lounge.jpg'), polaroidCap: 'Common room, 9 pm',
+        cafeText: 'The cafe is the reason nobody leaves the building before noon. Long windows, low tables, a speaker that takes requests, and a kitchen that will feed you at odd hours if you ask nicely.',
+        valleyImg: R('assets/valley.jpg'), valleyAlt: 'Tirthan valley from the balcony', valleyPos: '50% 50%',
+        valleyEyebrow: 'What is out there', valleyA: 'Everything worth', valleyB: 'walking to',
+        nearby: [
+          { name: 'Jalori Pass', dist: '11 km', note: 'The 3,120 m saddle on the road to Ani. Snowbound in winter, wildflowers in June.' },
+          { name: 'Serolsar Lake', dist: '5 km walk', note: 'A flat forest trail from Jalori to a still lake and the Buddhi Nagin temple.' },
+          { name: 'Raghupur Fort', dist: '3 km walk', note: 'A ruined wall on a meadow ridge with a full Dhauladhar view. Best at sunset.' },
+          { name: 'Jibhi waterfall', dist: '9 km', note: 'Short scramble from the road through cedar and moss. Cold, shallow, worth it.' },
+          { name: 'Chehni Kothi', dist: '17 km', note: 'A leaning eight-storey tower of stone and timber, older than most things nearby.' },
+          { name: 'Tirthan river', dist: '12 km', note: 'Trout water at the edge of the Great Himalayan National Park. Permits at Gushaini.' }
+        ],
+        gallery: [
+          ['ridge-hostel', 'The hostel on the ridge above Shoja'], ['facade', 'Stone facade with yellow windows'],
+          ['lounge', 'Common room with pendant lights'], ['pod-dorm-2', 'Pod bunks and storage'],
+          ['private-room-2', 'Private room window'], ['cafe-window', 'Cafe window seat and books'],
+          ['facade-2', 'The building from the road'], ['valley', 'Prayer flags over the valley']
+        ],
+        events: [
+          { when: 'Every night', what: 'Bonfire on the terrace', note: 'Weather permitting, from about eight.' },
+          { when: 'Fridays', what: 'Open mic', note: 'Two guitars live here. Bring anything else.' },
+          { when: 'Sundays', what: 'Sunrise walk to Raghupur', note: 'Leaves at five. Tea at the top.' },
+          { when: 'Full moon', what: 'Listening session', note: 'Records, no talking, lights off.' }
+        ],
+        reachA: 'It is meant to be', reachB: 'a little far',
+        route: [
+          { leg: 'Leg 01', title: 'Delhi or Chandigarh to Aut', note: 'Overnight Volvo to Aut tunnel, about twelve hours from Delhi and six from Chandigarh.' },
+          { leg: 'Leg 02', title: 'Aut to Banjar', note: 'Turn right before the tunnel into the Tirthan valley. Shared taxis and buses run all morning, roughly an hour.' },
+          { leg: 'Leg 03', title: 'Banjar to Shoja', note: 'Forty minutes uphill by bus or taxi, through Ghiyagi and Jibhi. The road climbs the whole way.' },
+          { leg: 'Leg 04', title: 'The last hundred metres', note: 'We are on the main Shoja road, grey stone with yellow windows and a parrot on the sign. You cannot miss it.' }
+        ],
+        bookImg: R('assets/facade.jpg'),
+        address: 'Misfits Hostel & Cafe, Shoja, Banjar tehsil, Kullu, Himachal Pradesh 175123'
+      },
+      kasol: {
+        key: 'kasol', name: 'Kasol', other: 'Shoja', region: 'Parvati Valley · 1,580 m',
+        heroImg: R('assets/k-facade-2.jpg'), heroAlt: 'Misfits Kasol at dusk', heroPos: '50% 45%',
+        tagline: 'A lantern-lit house with a garden lawn, a games room and snow peaks over the cedars. Trails to Kheerganga and Tosh start up the road.',
+        alt2: 'Garden · Pool table · Cafe',
+        roomsA: 'Bunks, curtains', roomsB: 'and loud walls',
+        roomsIntro: 'Dorms and private rooms around a garden courtyard. Rates are per night and include bedding and hot water.',
+        rooms: [
+          { name: 'Curtained dorm', price: p.rateKasolDorm ?? '₹599', img: R('assets/k-dorm-c.jpg'),
+            blurb: 'Yellow bunks with full-length curtains, a reading light and a socket at every bed. Close the curtain and the room goes away.',
+            tags: ['Privacy curtain', 'Reading light', 'Socket'] },
+          { name: 'Striped dorm', price: p.rateKasolDorm2 ?? '₹549', img: R('assets/k-dorm-b.jpg'),
+            blurb: 'Bunks under painted stripes, a wall lamp and a small shelf at every bed for your phone and glasses.',
+            tags: ['Bunk beds', 'Wall lamp', 'Shelf'] },
+          { name: 'Private double', price: p.rateKasolPrivate ?? '₹1,800', img: R('assets/k-private.jpg'),
+            blurb: 'A wide bed, a geometric feature wall, a wardrobe and fresh towels waiting when you arrive.',
+            tags: ['2 guests', 'Wardrobe', 'Towels'] }
+        ],
+        facts: [
+          { v: '1,580 m', k: 'Above sea level' }, { v: 'Pool table', k: 'And foosball inside' },
+          { v: 'Cafe', k: 'On site, opens to the lawn' }, { v: 'Garden', k: 'With a mountain view' }
+        ],
+        marquee: ['Bunks', 'Pool table', 'Garden fires', 'Parvati Valley', 'Kheerganga', 'Tosh', 'Foosball', 'Long stays'],
+        cafeImg: R('assets/k-games.jpg'), cafeAlt: 'Games room with pool and foosball tables',
+        polaroid: R('assets/k-garden.jpg'), polaroidCap: 'The lawn, mid-afternoon',
+        cafeText: 'The Kasol cafe opens onto the garden. Inside is a full-size pool table, a foosball table and a long cushioned bench for the hours after a trek.',
+        valleyImg: R('assets/k-view.jpg'), valleyAlt: 'Snow peaks over the cedars from the Kasol terrace', valleyPos: '50% 22%',
+        valleyEyebrow: 'Around the Parvati', valleyA: 'Trails start', valleyB: 'up the road',
+        nearby: [
+          { name: 'Chalal', dist: '2 km walk', note: 'Across the footbridge and along the river through pine forest to a quiet village.' },
+          { name: 'Manikaran', dist: '4 km', note: 'Hot springs and a gurudwara with a free langar, steam rising off the river.' },
+          { name: 'Grahan', dist: '10 km trek', note: 'A steady forest climb to a village that sees very few visitors.' },
+          { name: 'Kheerganga', dist: '12 km trek', note: 'From Barshaini, a full day up to a meadow with a hot spring pool at the top.' },
+          { name: 'Tosh', dist: '20 km', note: 'The village at the end of the road above Barshaini, with snow peaks close enough to count.' },
+          { name: 'Malana', dist: '22 km', note: 'An old village on its own ridge with its own rules. Visit respectfully and touch nothing.' }
+        ],
+        gallery: [
+          ['k-facade-2', 'The Kasol house at dusk'], ['k-courtyard', 'Courtyard and lawn under the peaks'],
+          ['k-garden', 'Garden seating from above'], ['k-games', 'Games room'],
+          ['k-dorm-a', 'Striped dorm'], ['k-dorm-c', 'Curtained dorm'],
+          ['k-private', 'Private double'], ['k-garden-games', 'Evening game on the lawn']
+        ],
+        events: [
+          { when: 'Every night', what: 'Fire in the garden', note: 'From about eight, when the lawn lights come on.' },
+          { when: 'Daily', what: 'Pool and foosball', note: 'Winner stays on. Loser buys the chai.' },
+          { when: 'Evenings', what: 'Games on the lawn', note: 'Whatever there are enough people for.' },
+          { when: 'Weekends', what: 'Movie night', note: 'On the big screen in the games room.' }
+        ],
+        reachA: 'Straight up', reachB: 'the Parvati',
+        route: [
+          { leg: 'Leg 01', title: 'Delhi or Chandigarh to Bhuntar', note: 'Overnight Volvo to Bhuntar, about twelve hours from Delhi and seven from Chandigarh.' },
+          { leg: 'Leg 02', title: 'Bhuntar to Kasol', note: 'Buses and shared taxis run up the Parvati valley through Jari, roughly an hour and a half.' },
+          { leg: 'Leg 03', title: 'Flying in', note: 'Kullu–Manali airport is at Bhuntar itself. A taxi from the terminal to Kasol takes about ninety minutes.' },
+          { leg: 'Leg 04', title: 'The last stretch', note: 'Look for the lantern-lit gate and the wooden arch with the neon sign.' }
+        ],
+        bookImg: R('assets/k-facade.jpg'),
+        address: 'Misfits Hostel & Cafe, Kasol, Parvati Valley, Kullu, Himachal Pradesh'
+      }
+    };
+    const loc = this.state.loc === 'kasol' ? 'kasol' : 'shoja';
+    const L = LOC[loc];
+    const rooms = L.rooms;
+    const setLoc = (k) => this.setState(st => st.loc === k ? null : { loc: k, form: { ...st.form, room: '' }, lightbox: null });
+    const scrollTo = (id) => {
+      const el = document.getElementById(id); if (!el) return;
+      window.scrollTo({ top: el.getBoundingClientRect().top + (window.scrollY || 0) - 64, behavior: 'smooth' });
+    };
+
+    const spotDefs = [
+      ['01', 'wide', 'The whole pod', 'Steel frame, two bunks, a ladder that does not wobble.', '50%', '50%', 1, '0s'],
+      ['02', 'panel', 'Privacy panel', 'A solid back and side, so the bed is a room within the room.', '62%', '30%', 1.5, '.2s'],
+      ['03', 'drawer', 'Lockable drawer', 'Full-width storage under the lower bunk. Bring your own padlock or borrow ours.', '52%', '83%', 1.6, '.4s'],
+      ['04', 'light', 'Light and socket', 'Bulkhead reading light and a two-pin socket at pillow height.', '36%', '52%', 1.8, '.6s'],
+      ['05', 'door', 'Balcony door', 'Yellow railing, deodars, and the sound of the Tirthan somewhere below.', '86%', '62%', 1.45, '.8s']
+    ];
+    const active = this.state.bunkView;
+    const spots = spotDefs.map(([n, key, title, note]) => ({
+      n, title, note,
+      bg: active === key ? 'rgba(240,168,26,.12)' : '#0e1311',
+      bd: active === key ? accent : 'rgba(243,240,232,.12)',
+      go: () => this.setState({ bunkView: key })
+    }));
+    const current = spotDefs.find(d => d[1] === active) || spotDefs[0];
+
+    const faqDefs = [
+      ['Is there network and wifi?', 'Wifi in the cafe and common room, and it is usually good enough for messages and a call home. Jio and Airtel work on the balcony. Do not plan a full work day around it.'],
+      ['How cold does it get?', 'Nights are cool even in June. From November the temperature drops below zero and snow is likely in January and February. We give extra quilts, and the cafe keeps a fire going.'],
+      ['Can I bring a vehicle?', 'Yes. There is parking on the road right outside, and the road to Shoja is tarred most of the way. In deep winter the last stretch may need a 4x4 or a short walk.'],
+      ['Do you take walk-ins?', 'Often, but not in May, June or the New Year week. Message us the day before and we will hold a bed.'],
+      ['Are meals included?', 'No, the cafe is separate and à la carte, which keeps it honest. Breakfast is served from 8 am and the kitchen closes at 10 pm.'],
+      ['Can I stay a month?', 'Yes, and people do. Ask us for the long-stay rate; it comes with a corner of the common room and laundry.']
+    ];
+
+    return {
+      accent,
+      year: '© ' + new Date().getFullYear(),
+      phone: p.whatsapp ?? '+91 98765 43210',
+      waPlain: 'https://wa.me/' + wa,
+      L, isShoja: loc === 'shoja', facts: L.facts,
+      locTabs: ['shoja', 'kasol'].map(k => ({
+        label: LOC[k].name, go: () => setLoc(k),
+        bg: loc === k ? accent : 'transparent', fg: loc === k ? '#0e1311' : 'rgba(243,240,232,.75)'
+      })),
+      swapLoc: () => setLoc(L.other.toLowerCase()),
+      heroPanels: ['shoja', 'kasol'].map(k => {
+        const d = LOC[k];
+        return {
+          name: d.name, region: d.region, tagline: d.tagline, img: d.heroImg, alt: d.heroAlt, pos: d.heroPos, alt2: d.alt2,
+          grow: this.state.hov === k ? '1.28' : '1',
+          enter: () => this.setState({ hov: k }), leave: () => this.setState({ hov: null }),
+          explore: () => { setLoc(k); setTimeout(() => scrollTo('rooms'), 60); }
+        };
+      }),
+      rooms,
+      roomNames: rooms.map(r => r.name + ' — ' + r.price).concat(['Not sure yet']),
+      bunkView: active,
+      bunkSpots: spots,
+      steam: ['0s', '1.2s', '2.4s'],
+      marquee: [0, 1].flatMap(() => L.marquee)
+        .map((t, i) => ({ t, c: i % 2 ? 'transparent' : '#f3f0e8', stroke: i % 2 ? '1px rgba(243,240,232,.55)' : '0' })),
+      embers: Array.from({ length: 14 }, (_, i) => ({
+        x: (4 + ((i * 37) % 60)) + '%', s: (3 + (i % 3)) + 'px',
+        dur: (5 + (i % 5) * 0.9).toFixed(1) + 's', d: (i * 0.55).toFixed(2) + 's',
+        dx: ((i % 2 ? 1 : -1) * (14 + (i * 7) % 40)) + 'px'
+      })),
+      logoSrc: (window.__resources && window.__resources.parrot) || 'assets/parrot.png',
+      flags: Array.from({ length: 16 }, (_, i) => ({
+        c: ['#d9691c', '#2f8a7a', '#e0b02a', '#b8412a', '#3f6b8a', '#6f8f3a'][i % 6],
+        d: (i * 0.14).toFixed(2) + 's'
+      })),
+      bedZoom: String(current[6]),
+      bedOrigin: current[4] + ' ' + current[5],
+      bedCaption: { title: current[2], note: current[3] },
+      bedMarks: spotDefs.slice(1).map(([n, key, title, note, x, y, z, delay]) => ({
+        title, x, y, delay,
+        size: active === key ? '22px' : '18px',
+        fill: active === key ? accent : 'rgba(240,168,26,.45)',
+        go: () => this.setState({ bunkView: key })
+      })),
+      cafeRows: [
+        { a: 'Breakfast — parathas, eggs, porridge, French toast', b: '8 – 11 am' },
+        { a: 'All day — thukpa, momos, thali, pasta, pizza', b: '11 am – 10 pm' },
+        { a: 'Filter coffee, masala chai, lemon honey ginger', b: 'Always on' },
+        { a: 'Packed lunch for a trek, ordered the night before', b: 'On request' }
+      ],
+      nearby: L.nearby.map((p, i) => ({ ...p, n: String(i + 1).padStart(2, '0') })),
+      gallery: L.gallery.map(([id, alt]) => {
+        const src = R('assets/' + id + '.jpg');
+        return { src, alt, open: () => this.setState({ lightbox: src }) };
+      }),
+      lightbox: this.state.lightbox,
+      closeLightbox: () => this.setState({ lightbox: null }),
+      notes: [
+        { text: 'Add a real review here — pull your favourite three from Google or Hostelworld and paste them in.', who: 'Guest note — replace' },
+        { text: 'A second one. Short quotes work best; two lines is plenty.', who: 'Guest note — replace' },
+        { text: 'And a third. Name, month and country reads well at the end.', who: 'Guest note — replace' }
+      ].map((n, i) => ({ ...n, rot: ['-2deg', '1.5deg', '-1deg'][i % 3] })),
+      events: L.events,
+      route: L.route.map((r, i) => ({ ...r, n: String(i + 1) })),
+      faqs: faqDefs.map(([q, a], i) => ({
+        q, a,
+        sign: this.state.openFaq === i ? '–' : '+',
+        display: this.state.openFaq === i ? 'block' : 'none',
+        toggle: () => this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i }))
+      })),
+      form: this.state.form,
+      setDate: set('date'), setNights: set('nights'), setGuests: set('guests'), setRoom: set('room'),
+      formHint: 'Nothing is charged here. The button writes your dates into a WhatsApp message so a human can confirm the room.',
+      submit: (e) => {
+        e.preventDefault();
+        const f = this.state.form;
+        const msg = `Hello Misfits ${L.name}! I'd like to book ${f.room || rooms[0].name} for ${f.guests} guest(s), ${f.nights} night(s)` +
+          (f.date ? `, arriving ${f.date}.` : '.');
+        window.open('https://wa.me/' + wa + '?text=' + encodeURIComponent(msg), '_blank');
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
